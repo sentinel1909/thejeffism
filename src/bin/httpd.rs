@@ -15,7 +15,11 @@ fn index() -> Template {
 
 #[launch]
 fn rocket() -> _ {
-    rocket::build()
+    let figment = rocket::Config::figment()
+        .merge(("port", 8080))
+        .merge(("address", "0.0.0.0"));
+
+    rocket::custom(figment)
         .attach(Template::fairing())
         .mount("/static", FileServer::from("static"))
         .mount("/", routes![index])

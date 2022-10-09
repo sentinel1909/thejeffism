@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@microsoft/fast-components/dist/fast-components.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/screen.css" media="screen" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" media="screen,print">
+        <title>thejeffism</title>
+    </head>
+    <body>
+        <header>
+            <h1>The Jeffism</h1>
+            <img src="/static/20200619_Canon7DMKII_001.jpg" />
+        </header>
+
+        {% block content %}{% endblock content %}
+
+        <footer>
+            <p>&copy; <span id="copyright-year"></span> Jeffery D Mitchell All Rights Reserved</p>
+        </footer>
+        <script src="/static/scripts.js"></script>
+    </body>
+</html>

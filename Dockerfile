@@ -10,16 +10,16 @@ RUN rustup target add x86_64-unknown-linux-musl
 
 ENV PKG_CONFIG_ALLOW_CROSS=1
 
-RUN cargo build — target x86_64-unknown-linux-musl — release
+RUN cargo build  --target x86_64-unknown-linux-musl --release
 
 FROM scratch
 
-COPY — from=builder /target/x86_64-unknown-linux-musl/release/thejeffism .
+COPY --from=builder /target/x86_64-unknown-linux-musl/release/thejeffism_app .
 
 COPY templates templates
 
 COPY static static
 
-EXPOSE 8000
+EXPOSE 8080
 
-CMD ["/thejeffism"]
+CMD ["/thejeffism_app"]

@@ -1,2 +1,11 @@
-<h1>{{ message }}</h1>
-<img src="/static/20200619_Canon7DMKII_001.jpg" />
+{% extends "base" %}
+
+{% block content %}
+
+    <fast-card class="card">
+        <h3>Card Title</h3>
+        <p>{{ message }}</p>
+        <fast-button>More?</fast-button>
+    </fast-card>
+    
+{% endblock content %}
