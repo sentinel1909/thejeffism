@@ -1,9 +1,25 @@
 [package]
-name = "rocket"
+name = "thejeffism"
 version = "0.1.0"
+authors = ["Jeffery D Mitchell", "<sentinel1909@protonmail.com>"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[[bin]]
+name = "thejeffism_app"
+path = "src/bin/httpd.rs"
+
+[lib]
+name = "thejeffism_lib"
+path = "src/lib/mod.rs"
+
 [dependencies]
 rocket = "0.5.0-rc.2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0.86"
+
+[dependencies.rocket_dyn_templates]
+version = "0.1.0-rc.2"
+features = ["tera"]
+
