@@ -6,11 +6,11 @@ extern crate rocket;
 use rocket::fs::FileServer;
 use rocket_dyn_templates::Template;
 
-use thejeffism_lib::domain::index::IndexContext;
+use thejeffism_lib::domain::card::CardContext;
 
 #[get("/")]
 fn index() -> Template {
-    Template::render("index", IndexContext::new())
+    Template::render("index", CardContext::new())
 }
 
 #[launch]
