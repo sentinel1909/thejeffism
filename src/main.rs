@@ -1,6 +1,5 @@
 #[macro_use]
 extern crate rocket;
-use chrono::{DateTime, Datelike, Local};
 
 #[get("/")]
 fn index() -> &'static str {
