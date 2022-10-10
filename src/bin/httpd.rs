@@ -6,11 +6,17 @@ extern crate rocket;
 use rocket::fs::FileServer;
 use rocket_dyn_templates::Template;
 
+use thejeffism_lib::domain::about::AboutContext;
 use thejeffism_lib::domain::card::CardContext;
 
 #[get("/")]
 fn index() -> Template {
     Template::render("index", CardContext::new())
+}
+
+#[get("/about")]
+fn about() -> Template {
+    Template::render("about", AboutContext::new())
 }
 
 #[launch]
@@ -22,5 +28,5 @@ fn rocket() -> _ {
     rocket::custom(figment)
         .attach(Template::fairing())
         .mount("/static", FileServer::from("static"))
-        .mount("/", routes![index])
+        .mount("/", routes![index, about])
 }

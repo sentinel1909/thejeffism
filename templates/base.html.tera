@@ -11,14 +11,14 @@
     </head>
     <body>
         <header>
-            <h1>The Jeffism</h1>
+            <h1><a href="/">The Jeffism</a></h1>
             <img src="/static/20200619_Canon7DMKII_001.jpg" />
         </header>
 
         <nav>
             <ul>
-                <li><a href="#">About Me</a>
-                <li><a href="#">Writing</a>
+                <li><a href="about">About Me</a>
+                <li><a href="https://medium.com/@sentinel1909">Writing</a>
                 <li><a href="#">Projects</a>
                 <li><a href="https://github.com/sentinel1909">GitHub</a>
             </ul>
