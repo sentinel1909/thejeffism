@@ -1,0 +1,12 @@
+{% extends "base" %}
+
+{% block content %}
+
+    <main>
+        <section>
+            <h2>Projects</h2>
+            {{ content }}
+        </section>
+    </main>
+
+{% endblock content %}

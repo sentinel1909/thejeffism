@@ -12,14 +12,14 @@
     <body>
         <header>
             <h1><a href="/">The Jeffism</a></h1>
-            <img src="/static/20200619_Canon7DMKII_001.jpg" />
+            <img class="img" src="/static/20200619_Canon7DMKII_001.jpg" />
         </header>
 
         <nav>
             <ul>
                 <li><a href="about">About Me</a>
                 <li><a href="https://medium.com/@sentinel1909">Writing</a>
-                <li><a href="#">Projects</a>
+                <li><a href="projects">Projects</a>
                 <li><a href="https://github.com/sentinel1909">GitHub</a>
             </ul>
 
@@ -27,6 +27,13 @@
 
         <footer>
             <p>&copy; <span id="copyright-year"></span> Jeffery D Mitchell All Rights Reserved</p>
+            <nav>
+                <ul>
+                    <li><a href="https://twitter.com/sentinel1909">Twitter</a>
+                    <li><a href="https://instagram.com/thesentinel1909">Instagram</a>
+                </ul>
+            </nav>
+            <p>Site built with Rust, Rocket, Tera, and Docker...all hosted at <a href="https://railway.app">Railway</a>
         </footer>
         <script src="/static/scripts.js"></script>
     </body>

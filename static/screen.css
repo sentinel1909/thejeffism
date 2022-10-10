@@ -64,7 +64,47 @@ select {
 /* End Browser reset */
 
 /* Main styles */
+
+body {
+  background-color: lightblue;
+  margin: 0 auto;
+  max-width: 60em;
+  width: 90%;
+}
+
+nav {
+  padding: 0.5em;
+}
+
+nav ul {
+  list-style: none;
+  padding-bottom: 0.5em;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0.5em;
+}
+
+header {
+  padding-bottom: 0.5em;
+}
+
+footer {
+  padding-top: 1.5em;
+}
+
+a {
+  color: darkblue;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
 .card {
+  background-color: rgba(0, 0, 0, 0.5);
   height: 640px;
   width: 480px;
   color: white;
