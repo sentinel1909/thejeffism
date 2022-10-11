@@ -9,16 +9,18 @@
             <p>I'm a Certified Professional and Fire Engineer by day, but turn into a self-taught, fledgling developer and IT junkie by night...can also be dangerous with a camera.</p>
         </section>
         <br />
-        <section>
+        <section class="grid">
             <h2>Latest Posts</h2>
-            {% for view in views %}
-            <fast-card class="card">
-                <h3>{{ view.title }}</h3>
-                <h4>{{ view.date }}</h4>
-                <p>{{ view.content }}</p>
-                <fast-button href="#">More</fast-button>
-            </fast-card>
+            <article class="row">
+                {% for view in views %}
+                <fast-card class="card">
+                    <h3>{{ view.title }}</h3>
+                    <h4>{{ view.date }}</h4>
+                    <p>{{ view.content }}</p>
+                    <fast-button href="#">More?</fast-button>
+                </fast-card>
             {% endfor %}
+            </article>
         </section>
     </main>
 

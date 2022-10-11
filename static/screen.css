@@ -69,7 +69,8 @@ body {
   background-color: lightblue;
   margin: 0 auto;
   max-width: 60em;
-  width: 90%;
+  width: 100%;
+  padding-top: 1.25em;
 }
 
 nav {
@@ -109,8 +110,18 @@ img {
 
 .card {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 220px;
-  width: 320px;
+  height: 190px;
+  width: 300px;
   color: white;
   padding: 1.25em;
+}
+
+.grid {
+  min-height: 200px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
 }

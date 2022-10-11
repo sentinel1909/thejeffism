@@ -4,6 +4,7 @@
 extern crate rocket;
 
 use rocket::fs::FileServer;
+use rocket::http::Status;
 use rocket_dyn_templates::{context, Template};
 
 use thejeffism_lib::domain::about::AboutContext;
@@ -31,6 +32,11 @@ fn projects() -> Template {
     Template::render("projects", ProjectsContext::new())
 }
 
+#[get("/health_check")]
+fn health_check() -> (Status, &'static str) {
+    (Status::Ok, "200 OK")
+}
+
 #[launch]
 fn rocket() -> _ {
     let figment = rocket::Config::figment()
@@ -40,5 +46,5 @@ fn rocket() -> _ {
     rocket::custom(figment)
         .attach(Template::fairing())
         .mount("/static", FileServer::from("static"))
-        .mount("/", routes![index, about, projects])
+        .mount("/", routes![index, about, projects, health_check])
 }
