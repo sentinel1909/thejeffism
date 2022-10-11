@@ -4,15 +4,23 @@
 extern crate rocket;
 
 use rocket::fs::FileServer;
-use rocket_dyn_templates::Template;
+use rocket_dyn_templates::{context, Template};
 
 use thejeffism_lib::domain::about::AboutContext;
+use thejeffism_lib::domain::card::Card;
 use thejeffism_lib::domain::projects::ProjectsContext;
-use thejeffism_lib::domain::card::CardContext;
 
 #[get("/")]
 fn index() -> Template {
-    Template::render("index", CardContext::new())
+    let rendered_cards = Card::get_cards();
+    Template::render(
+        "index",
+        context! {
+            title: &rendered_cards.0,
+            date: &rendered_cards.0,
+            content: &rendered_cards.0
+        },
+    )
 }
 
 #[get("/about")]

@@ -10,7 +10,13 @@ pub struct AboutContext {
 impl AboutContext {
     pub fn new() -> Self {
         AboutContext {
-            content: "Eventually, I will tell you all about me."
+            content: "Eventually, I will tell you all about me.",
         }
+    }
+}
+
+impl Default for AboutContext {
+    fn default() -> Self {
+        Self::new()
     }
 }

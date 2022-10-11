@@ -10,7 +10,13 @@ pub struct ProjectsContext {
 impl ProjectsContext {
     pub fn new() -> Self {
         ProjectsContext {
-            content: "The projects I'm working on..."
+            content: "The projects I'm working on...",
         }
+    }
+}
+
+impl Default for ProjectsContext {
+    fn default() -> Self {
+        Self::new()
     }
 }
