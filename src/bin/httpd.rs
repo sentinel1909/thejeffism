@@ -16,9 +16,7 @@ fn index() -> Template {
     Template::render(
         "index",
         context! {
-            title: &rendered_cards.0,
-            date: &rendered_cards.0,
-            content: &rendered_cards.0
+            views: rendered_cards
         },
     )
 }
