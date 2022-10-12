@@ -3,11 +3,11 @@
 use pulldown_cmark::{html, Parser};
 
 pub fn get_markdown() -> String {
-    let markdown_str = "
-        ## Test
-        ### Markdown
-        
-        This is some test in markdown.";
+    let markdown_str = r#"
+## First Post
+### 2022-10-09
+Every site has to begin somewhere. This content is written in markdown and rendered to the page thanks to pulldown-cmark!
+"#;
 
     let parser = Parser::new(markdown_str);
 
