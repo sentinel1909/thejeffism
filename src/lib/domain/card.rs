@@ -25,7 +25,22 @@ impl Card {
             Card {
                 title: "Third Post",
                 date: "2022-10-11",
-                content: "OMG it took me 2 hours to render these cards..."
+                content: "OMG it took me 2 hours to render these cards...",
+            },
+            Card {
+                title: "Fourth Post",
+                date: "2022-10-12",
+                content: "Trying to get markdown rendered to a posts page..."
+            },
+            Card {
+                title: "Fifth Post",
+                date: "2022-10-13",
+                content: "Just filling in space..."
+            },
+            Card {
+                title: "Sixth Post",
+                date: "2022-10-14",
+                content: "And now the grid is complete..."
             }
         ];
         cards

@@ -109,15 +109,20 @@ img {
 }
 
 .card {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   height: 190px;
   width: 300px;
   color: white;
   padding: 1.25em;
 }
 
+.card a {
+  color: gold;
+}
+
 .grid {
   min-height: 200px;
+  grid-gap: 20px;
 }
 
 .row {

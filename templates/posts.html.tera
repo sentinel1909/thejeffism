@@ -1,0 +1,11 @@
+{% extends "base" %}
+
+{% block content %}
+
+    <main>
+        <article>
+            {{ value }}
+        </article>
+    </main>
+
+{% endblock content %}

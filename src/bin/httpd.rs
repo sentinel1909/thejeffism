@@ -10,6 +10,7 @@ use rocket_dyn_templates::{context, Template};
 use thejeffism_lib::domain::about::AboutContext;
 use thejeffism_lib::domain::card::Card;
 use thejeffism_lib::domain::projects::ProjectsContext;
+use thejeffism_lib::domain::posts::get_markdown;
 
 #[get("/")]
 fn index() -> Template {
@@ -37,6 +38,12 @@ fn health_check() -> (Status, &'static str) {
     (Status::Ok, "200 OK")
 }
 
+#[get("/posts")]
+fn posts() -> Template {
+    let content = get_markdown();
+    Template::render("posts", context! { value: content})
+}
+
 #[launch]
 fn rocket() -> _ {
     let figment = rocket::Config::figment()
@@ -46,5 +53,5 @@ fn rocket() -> _ {
     rocket::custom(figment)
         .attach(Template::fairing())
         .mount("/static", FileServer::from("static"))
-        .mount("/", routes![index, about, projects, health_check])
+        .mount("/", routes![index, about, projects, health_check, posts])
 }
