@@ -3,11 +3,11 @@
 use pulldown_cmark::{html, Parser};
 
 pub fn get_markdown() -> String {
-    let markdown_str = r#"
-    # Test
-    ## Markdown Content
-    This is some test markdown content.
-    "#;
+    let markdown_str = "
+        ## Test
+        ### Markdown
+        
+        This is some test in markdown.";
 
     let parser = Parser::new(markdown_str);
 

@@ -41,7 +41,7 @@ fn health_check() -> (Status, &'static str) {
 #[get("/posts")]
 fn posts() -> Template {
     let content = get_markdown();
-    Template::render("posts", context! { value: content})
+    Template::render("posts", context! { value: content })
 }
 
 #[launch]
