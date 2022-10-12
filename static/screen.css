@@ -68,7 +68,7 @@ select {
 body {
   background-color: lightblue;
   margin: 0 auto;
-  max-width: 60em;
+  max-width: 75em;
   width: 100%;
   padding-top: 1.25em;
 }
@@ -93,6 +93,11 @@ header {
 
 section {
   display: inline;
+}
+
+article {
+  padding-top: 1.25em;
+  padding-bottom: 1.25em;
 }
 
 footer {
@@ -122,11 +127,11 @@ img {
 
 .grid {
   min-height: 200px;
-  grid-gap: 20px;
 }
 
 .row {
   display: grid;
   grid-template-columns: auto auto auto;
   text-align: center;
+  grid-gap: 1.5em;
 }

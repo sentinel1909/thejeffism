@@ -9,8 +9,8 @@ use rocket_dyn_templates::{context, Template};
 
 use thejeffism_lib::domain::about::AboutContext;
 use thejeffism_lib::domain::card::Card;
-use thejeffism_lib::domain::projects::ProjectsContext;
 use thejeffism_lib::domain::posts::get_markdown;
+use thejeffism_lib::domain::projects::ProjectsContext;
 
 #[get("/")]
 fn index() -> Template {

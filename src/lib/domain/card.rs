@@ -30,18 +30,18 @@ impl Card {
             Card {
                 title: "Fourth Post",
                 date: "2022-10-12",
-                content: "Trying to get markdown rendered to a posts page..."
+                content: "Trying to get markdown rendered to a posts page...",
             },
             Card {
                 title: "Fifth Post",
                 date: "2022-10-13",
-                content: "Just filling in space..."
+                content: "Just filling in space...",
             },
             Card {
                 title: "Sixth Post",
                 date: "2022-10-14",
-                content: "And now the grid is complete..."
-            }
+                content: "And now the grid is complete...",
+            },
         ];
         cards
     }
