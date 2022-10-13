@@ -12,7 +12,10 @@
     <body>
         <header>
             <h1><a href="/">The Jeffism</a></h1>
-            <img class="img" src="/static/20200619_Canon7DMKII_001.jpg" />
+            <figure>
+                 <img class="img" src="/static/20200619_Canon7DMKII_001.jpg" />
+                 <figcaption>Boundary Bay at Low Tide, June 19, 2020, Canon 7D MKII</figcaption>
+            </figure>
         </header>
 
         <nav>
@@ -20,6 +23,7 @@
                 <li><a href="about">About Me</a>
                 <li><a href="https://medium.com/@sentinel1909">Writing</a>
                 <li><a href="projects">Projects</a>
+                <li><a href="music">Music</a>
                 <li><a href="https://github.com/sentinel1909">GitHub</a>
             </ul>
 

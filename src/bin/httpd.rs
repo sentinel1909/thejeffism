@@ -9,6 +9,7 @@ use rocket_dyn_templates::{context, Template};
 
 use thejeffism_lib::domain::about::AboutContext;
 use thejeffism_lib::domain::card::Card;
+use thejeffism_lib::domain::music::MusicContext;
 use thejeffism_lib::domain::post::get_html;
 use thejeffism_lib::domain::projects::ProjectsContext;
 
@@ -26,6 +27,11 @@ fn index() -> Template {
 #[get("/about")]
 fn about() -> Template {
     Template::render("about", AboutContext::new())
+}
+
+#[get("/music")]
+fn music() -> Template {
+    Template::render("music", MusicContext::new())
 }
 
 #[get("/projects")]
@@ -59,5 +65,8 @@ fn rocket() -> _ {
     rocket::custom(figment)
         .attach(Template::fairing())
         .mount("/static", FileServer::from("static"))
-        .mount("/", routes![index, about, projects, health_check, post])
+        .mount(
+            "/",
+            routes![index, about, projects, health_check, music, post],
+        )
 }

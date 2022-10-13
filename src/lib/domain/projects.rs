@@ -10,7 +10,7 @@ pub struct ProjectsContext {
 impl ProjectsContext {
     pub fn new() -> Self {
         ProjectsContext {
-            content: "The projects I'm working on...",
+            content: "This site is my first major project with Rust. Will write more about it in the coming days.",
         }
     }
 }

@@ -5,7 +5,8 @@
     <main>
         <section>
             <article>
-                {{ value | safe }}
+                <h2>Music</h2>
+                {{ content }}
             </article>
         </section>
     </main>
