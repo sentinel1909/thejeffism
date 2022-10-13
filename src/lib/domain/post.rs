@@ -1,4 +1,4 @@
-// posts.rs
+// post.rs
 
 use pulldown_cmark::{html, Options, Parser};
 use std::fs;
