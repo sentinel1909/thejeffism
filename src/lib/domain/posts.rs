@@ -10,7 +10,7 @@ fn read_file_string(filepath: &Path) -> Result<String, Box<dyn std::error::Error
 }
 
 pub fn get_html() -> Result<String, Box<dyn std::error::Error>> {
-    let path = Path::new("src/lib/domain/posts/20221011.md");
+    let path = Path::new("static/posts/20221011.md");
     let mut options = Options::empty();
     options.insert(Options::ENABLE_TABLES);
     let markdown_input = read_file_string(path)?;
