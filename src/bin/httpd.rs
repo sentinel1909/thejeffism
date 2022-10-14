@@ -46,7 +46,8 @@ fn health_check() -> (Status, &'static str) {
 
 #[get("/post")]
 fn post() -> Template {
-    let content = get_html();
+    let postid = 20221011;
+    let content = get_html(postid);
     match content {
         Ok(html) => Template::render("post", context! { value: html }),
         Err(_) => Template::render(
