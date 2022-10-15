@@ -14,10 +14,10 @@ impl Card {
     pub fn get_cards() -> Vec<Card> {
         let cards = vec![
             Card {
-                id: 20221009,
-                title: "First Post",
-                date: "2022-10-09",
-                content: "Every site has to begin somewhere...",
+                id: 20220405,
+                title: "Rust: The Journey Begins",
+                date: "2022-04-05",
+                content: "Since the end of 2020, I've been on a mission to re-learn to code...",
             },
             Card {
                 id: 20221010,
