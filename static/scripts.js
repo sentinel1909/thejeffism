@@ -1,5 +1,3 @@
-"use strict";
+// javascript can be used here if needed
 
-let year = new Date().getFullYear();
-let copyrightYear = document.querySelector("#copyright-year");
-copyrightYear.textContent = year;
+"use strict";

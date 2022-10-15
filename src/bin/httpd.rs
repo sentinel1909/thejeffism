@@ -12,14 +12,17 @@ use thejeffism_lib::domain::card::Card;
 use thejeffism_lib::domain::music::MusicContext;
 use thejeffism_lib::domain::post::get_html;
 use thejeffism_lib::domain::projects::ProjectsContext;
+use thejeffism_lib::time::get_current_year;
 
 #[get("/")]
 fn index() -> Template {
     let rendered_cards = Card::get_cards();
+    let year = get_current_year();
     Template::render(
         "index",
         context! {
-            views: rendered_cards
+            views: rendered_cards,
+            copyright_year: year
         },
     )
 }

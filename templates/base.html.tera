@@ -30,7 +30,7 @@
         {% block content %}{% endblock content %}
 
         <footer>
-            <p>&copy; <span id="copyright-year"></span> Jeffery D Mitchell All Rights Reserved</p>
+            <p>&copy; {{ copyright_year }} Jeffery D Mitchell All Rights Reserved</p>
             <nav>
                 <ul>
                     <li><a href="https://twitter.com/sentinel1909">Twitter</a>
