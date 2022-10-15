@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" media="screen,print">
+        <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
         <title>thejeffism</title>
     </head>
     <body>
@@ -24,6 +25,7 @@
                 <li><a href="https://medium.com/@sentinel1909">Writing</a>
                 <li><a href="/projects">Projects</a>
                 <li><a href="/music">Music</a>
+                <li><a href="/photography">Photography</a>
                 <li><a href="https://github.com/sentinel1909">GitHub</a>
             </ul>
 

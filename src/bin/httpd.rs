@@ -10,6 +10,7 @@ use rocket_dyn_templates::{context, Template};
 use thejeffism_lib::domain::about::AboutContext;
 use thejeffism_lib::domain::card::Card;
 use thejeffism_lib::domain::music::MusicContext;
+use thejeffism_lib::domain::photography::PhotographyContext;
 use thejeffism_lib::domain::post::get_html;
 use thejeffism_lib::domain::projects::ProjectsContext;
 use thejeffism_lib::time::get_current_year;
@@ -40,6 +41,11 @@ fn music() -> Template {
 #[get("/projects")]
 fn projects() -> Template {
     Template::render("projects", ProjectsContext::new())
+}
+
+#[get("/photography")]
+fn photography() -> Template {
+    Template::render("photography", PhotographyContext::new())
 }
 
 #[get("/health_check")]
@@ -74,6 +80,14 @@ fn rocket() -> _ {
         .mount("/static", FileServer::from("static"))
         .mount(
             "/",
-            routes![index, about, projects, health_check, music, posts],
+            routes![
+                index,
+                about,
+                projects,
+                health_check,
+                music,
+                photography,
+                posts
+            ],
         )
 }
