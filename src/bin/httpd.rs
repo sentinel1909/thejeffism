@@ -50,8 +50,12 @@ fn health_check() -> (Status, &'static str) {
 #[get("/posts/<postid>")]
 fn posts(postid: u32) -> Template {
     let content = get_html(postid);
+    let year = get_current_year();
     match content {
-        Ok(html) => Template::render(postid.to_string(), context! { value: html }),
+        Ok(html) => Template::render(
+            postid.to_string(),
+            context! { value: html, copyright_year: year },
+        ),
         Err(_) => Template::render(
             "post",
             context! {value: "Unable to render from markdown file"},

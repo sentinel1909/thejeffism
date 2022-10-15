@@ -20,10 +20,10 @@
 
         <nav>
             <ul>
-                <li><a href="about">About Me</a>
+                <li><a href="/about">About Me</a>
                 <li><a href="https://medium.com/@sentinel1909">Writing</a>
-                <li><a href="projects">Projects</a>
-                <li><a href="music">Music</a>
+                <li><a href="/projects">Projects</a>
+                <li><a href="/music">Music</a>
                 <li><a href="https://github.com/sentinel1909">GitHub</a>
             </ul>
 
