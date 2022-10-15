@@ -17,7 +17,7 @@ impl Card {
                 id: 20221009,
                 title: "First Post",
                 date: "2022-10-09",
-                content: "Every site has to begin somewhere.",
+                content: "Every site has to begin somewhere...",
             },
             Card {
                 id: 20221010,

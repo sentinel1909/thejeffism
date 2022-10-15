@@ -5,7 +5,7 @@
     <main>
         <section>
             <article>
-                {{ value | safe }}
+                {% block post %} {% endblock post %}
             </article>
         </section>
     </main>

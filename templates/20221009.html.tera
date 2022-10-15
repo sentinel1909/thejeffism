@@ -1,0 +1,9 @@
+{% extends "posts" %}
+
+{% block post %}
+
+    <article>
+        {{ value | safe }}
+    </article>
+
+{% endblock post %}

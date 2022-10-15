@@ -44,12 +44,11 @@ fn health_check() -> (Status, &'static str) {
     (Status::Ok, "200 OK")
 }
 
-#[get("/post")]
-fn post() -> Template {
-    let postid = 20221011;
+#[get("/posts/<postid>")]
+fn posts(postid: u32) -> Template {
     let content = get_html(postid);
     match content {
-        Ok(html) => Template::render("post", context! { value: html }),
+        Ok(html) => Template::render(postid.to_string(), context! { value: html }),
         Err(_) => Template::render(
             "post",
             context! {value: "Unable to render from markdown file"},
@@ -68,6 +67,6 @@ fn rocket() -> _ {
         .mount("/static", FileServer::from("static"))
         .mount(
             "/",
-            routes![index, about, projects, health_check, music, post],
+            routes![index, about, projects, health_check, music, posts],
         )
 }
