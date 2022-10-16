@@ -14,7 +14,7 @@ impl MusicContext {
     pub fn new() -> Self {
         let year = get_current_year();
         MusicContext {
-            content: "A page devoted to spotlighting my favourite music",
+            content: "A page devoted to spotlighting my favourite music.",
             copyright_year: year,
         }
     }

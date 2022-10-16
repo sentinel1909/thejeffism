@@ -8,6 +8,12 @@
                 <h2>Music</h2>
                 {{ content }}
             </article>
+            <br />
+            <article>
+                <h3>Judas Priest Live Rarity</h3>
+                <p>They recently played &ldquo;Genocide&rdquo; for the first time in 40 years...</p>
+                <iframe width="845" height="475" src="https://www.youtube.com/embed/DjQD2Z7_gWo" title="JUDAS PRIEST " GENOCIDE"" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </article>
         </section>
     </main>
 
