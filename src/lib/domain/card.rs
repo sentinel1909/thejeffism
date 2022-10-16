@@ -3,6 +3,7 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Deserialize, Clone, Copy)]
+#[serde(crate = "rocket::serde")]
 pub struct Card {
     pub id: u32,
     pub title: &'static str,
@@ -51,9 +52,5 @@ impl Card {
             },
         ];
         cards
-    }
-
-    pub fn get_card_id(&self) -> u32 {
-        self.id
     }
 }

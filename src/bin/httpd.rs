@@ -5,6 +5,7 @@ extern crate rocket;
 
 use rocket::fs::FileServer;
 use rocket::http::Status;
+use rocket::serde::json::Json;
 use rocket_dyn_templates::{context, Template};
 
 use thejeffism_lib::domain::about::AboutContext;
@@ -48,9 +49,14 @@ fn photography() -> Template {
     Template::render("photography", PhotographyContext::new())
 }
 
-#[get("/health_check")]
-fn health_check() -> (Status, &'static str) {
+#[get("/api/health_check")]
+fn api_health_check() -> (Status, &'static str) {
     (Status::Ok, "200 OK")
+}
+
+#[get("/api/posts")]
+fn api_posts() -> Json<Vec<Card>> {
+    Json(Card::get_cards())
 }
 
 #[get("/posts/<postid>")]
@@ -84,10 +90,11 @@ fn rocket() -> _ {
                 index,
                 about,
                 projects,
-                health_check,
                 music,
                 photography,
-                posts
+                posts,
+                api_health_check,
+                api_posts,
             ],
         )
 }
