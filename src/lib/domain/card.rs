@@ -33,10 +33,10 @@ impl Card {
                 excerpt: "Before I continue my series of articles...",
             },
             Card {
-                id: 20221012,
-                title: "Coming Soon",
-                date: "xxxx-xx-xx",
-                excerpt: "Nothing to see yet...",
+                id: 20220414,
+                title: "Rust: Single Value Data Types",
+                date: "2022-04-14",
+                excerpt: "Today I continue my campaign about...",
             },
             Card {
                 id: 20221013,
