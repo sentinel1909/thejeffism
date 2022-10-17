@@ -4,9 +4,7 @@
 
     <main>
         <section>
-            <article>
-                {% block post %} {% endblock post %}
-            </article>
+            {% block post %} {% endblock post %}
         </section>
     </main>
 

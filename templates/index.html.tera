@@ -17,8 +17,7 @@
                     <h3>{{ view.title }}</h3>
                     <h4>{{ view.date }}</h4>
                     <p>{{ view.excerpt }}</p>
-                    <br>
-                    <p><a href="posts/{{ view.id }}">More?</a></p>
+                    <a href="/posts/{{ view.id }}">More?</a>
                 </fast-card>
             {% endfor %}
             </article>

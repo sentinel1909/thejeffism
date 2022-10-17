@@ -28,6 +28,7 @@
                 <li><a href="/photography">Photography</a>
                 <li><a href="https://github.com/sentinel1909">GitHub</a>
             </ul>
+        </nav>
 
         {% block content %}{% endblock content %}
 

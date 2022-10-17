@@ -73,16 +73,12 @@ body {
   padding-top: 1.25em;
 }
 
-nav {
-  padding: 0.5em;
-}
-
-nav ul {
+nav > ul {
   list-style: none;
   padding-bottom: 0.5em;
 }
 
-nav ul li {
+nav > ul li {
   display: inline-block;
   padding: 0.5em;
 }
@@ -100,6 +96,12 @@ article {
   padding-bottom: 1.25em;
 }
 
+article > ul {
+  list-style: square;
+  margin-left: 2em;
+  padding-bottom: 1.25em;
+}
+
 footer {
   padding-top: 1.5em;
 }
@@ -111,6 +113,10 @@ a {
 img {
   height: auto;
   max-width: 100%;
+}
+
+p {
+  padding-bottom: 1.25em;
 }
 
 .card {
