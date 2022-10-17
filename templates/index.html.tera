@@ -10,7 +10,7 @@
         </section>
         <br />
         <section class="grid">
-            <h2>Latest Posts</h2>
+            <h2>Writing Spotlight</h2>
             <article class="row">
                 {% for view in views %}
                 <fast-card class="card">

@@ -14,6 +14,7 @@ use thejeffism_lib::domain::music::MusicContext;
 use thejeffism_lib::domain::photography::PhotographyContext;
 use thejeffism_lib::domain::post::get_html;
 use thejeffism_lib::domain::projects::ProjectsContext;
+use thejeffism_lib::domain::writing::WritingContext;
 use thejeffism_lib::time::get_current_year;
 
 #[get("/")]
@@ -47,6 +48,11 @@ fn projects() -> Template {
 #[get("/photography")]
 fn photography() -> Template {
     Template::render("photography", PhotographyContext::new())
+}
+
+#[get("/writing")]
+fn writing() -> Template {
+    Template::render("writing", WritingContext::new())
 }
 
 #[get("/api/health_check")]
@@ -93,6 +99,7 @@ fn rocket() -> _ {
                 music,
                 photography,
                 posts,
+                writing,
                 api_health_check,
                 api_posts,
             ],

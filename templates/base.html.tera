@@ -13,22 +13,20 @@
     <body>
         <header>
             <h1><a href="/">The Jeffism</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/about">About Me</a>
+                    <li><a href="/writing">Writing</a>
+                    <li><a href="/projects">Projects</a>
+                    <li><a href="/music">Music</a>
+                    <li><a href="/photography">Photography</a>
+                </ul>
+            </nav>
             <figure>
                  <img class="img" src="/static/20200619_Canon7DMKII_001.jpg" />
                  <figcaption>Boundary Bay at Low Tide, June 19, 2020, Canon 7D MKII</figcaption>
             </figure>
         </header>
-
-        <nav>
-            <ul>
-                <li><a href="/about">About Me</a>
-                <li><a href="https://medium.com/@sentinel1909">Writing</a>
-                <li><a href="/projects">Projects</a>
-                <li><a href="/music">Music</a>
-                <li><a href="/photography">Photography</a>
-                <li><a href="https://github.com/sentinel1909">GitHub</a>
-            </ul>
-        </nav>
 
         {% block content %}{% endblock content %}
 
@@ -38,6 +36,7 @@
                 <ul>
                     <li><a href="https://twitter.com/sentinel1909">Twitter</a>
                     <li><a href="https://instagram.com/thesentinel1909">Instagram</a>
+                    <li><a href="https://github.com/sentinel1909">GitHub</a>
                 </ul>
             </nav>
             <p>Site built with Rust, Rocket, Tera, and Docker...all hosted at <a href="https://railway.app">Railway</a>
