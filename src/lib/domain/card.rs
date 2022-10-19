@@ -18,7 +18,7 @@ impl Card {
                 id: 20220405,
                 title: "Rust: The Journey Begins",
                 date: "2022-04-05",
-                excerpt: "Since the end of 2020, I've been re-learning to code...",
+                excerpt: "Since late 2020, I've been re-learning to code...",
             },
             Card {
                 id: 20220409,

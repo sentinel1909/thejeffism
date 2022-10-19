@@ -13,6 +13,7 @@ body {
 
   /* base measurements */
   --maxWidth-constrain: 80rem;
+  --maxWidth-flow: 40rem;
   --pad: clamp(0.5em, min(2vw, 4vh), 4em);
 }
 
@@ -159,7 +160,6 @@ main h2 {
 .row {
   display: grid;
   grid-template-columns: auto auto auto;
-  text-align: center;
   grid-gap: 0.5em;
 }
 
@@ -167,9 +167,14 @@ main h2 {
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 0;
   justify-content: center;
   padding: 1rem var(--pad);
   gap: clamp(1rem, var(--pad), 2rem);
+  text-align: center;
+  max-width: var(--maxWidth-flow);
+  margin: 1em auto;
 }
 
 #fauxBody > footer {
@@ -188,6 +193,7 @@ main h2 {
 
 #fauxBody > footer a {
   display: inline-block;
+  text-decoration: none;
   transition: transform 0.3s;
 }
 
