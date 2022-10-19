@@ -164,7 +164,7 @@ main h2 {
 }
 
 .card {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -177,6 +177,18 @@ main h2 {
   margin: 1em auto;
 }
 
+ul li {
+  margin: 2em;
+}
+
+p {
+  padding: 0.5em;
+}
+
+code {
+  margin: 2.5em;
+}
+
 #fauxBody > footer {
   display: flex;
   flex-wrap: wrap;
@@ -187,6 +199,7 @@ main h2 {
 }
 
 #fauxBody > footer li {
+  display: inline;
   list-style: none;
   padding: 0.25em 0;
 }
@@ -194,6 +207,7 @@ main h2 {
 #fauxBody > footer a {
   display: inline-block;
   text-decoration: none;
+  padding-right: 1.25em;
   transition: transform 0.3s;
 }
 
@@ -205,4 +219,16 @@ main h2 {
 #fauxBody > footer section:first-child {
   width: 100%;
   padding: 0.25em 0;
+}
+
+/* When screen size is below 640px, navigation menu switches to block */
+
+@media only screen and (max-width: 640px) {
+  #top li {
+    display: block;
+  }
+
+  #fauxBody > footer li {
+    display: block;
+  }
 }

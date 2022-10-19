@@ -3,7 +3,7 @@
 {% block content %}
 
     <main>
-        <section>
+        <section class="markdown">
             {% block post %} {% endblock post %}
         </section>
     </main>

@@ -36,7 +36,7 @@ impl Card {
                 id: 20220414,
                 title: "Rust: Single Value Data Types",
                 date: "2022-04-14",
-                excerpt: "Today I continue my campaign about...",
+                excerpt: "Today I continue my campaign about learning Rust...",
             },
             Card {
                 id: 20221013,
