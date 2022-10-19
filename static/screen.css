@@ -1,3 +1,21 @@
+/* site wide variables */
+
+body {
+  /* base colours */
+  --hue-primary: 180;
+  --sat-primary: 25%;
+  --luma-main-bg: 80%;
+  --color-main-bg: hsl(
+    var(--hue-primary),
+    var(--sat-primary),
+    var(--luma-main-bg)
+  );
+
+  /* base measurements */
+  --maxWidth-constrain: 80rem;
+  --pad: clamp(0.5em, min(2vw, 4vh), 4em);
+}
+
 /* Begin Browser reset */
 
 html,
@@ -63,72 +81,75 @@ select {
 
 /* End Browser reset */
 
+/* Unify focus style */
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
 /* Main styles */
 
-body {
-  background-color: lightblue;
-  margin: 0 auto;
-  max-width: 75em;
-  width: 100%;
-  padding-top: 1.25em;
+#fauxBody {
+  background-color: var(--color-main-bg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
 }
 
-nav > ul {
-  list-style: none;
-  padding-bottom: 0.5em;
+#fauxBody > header,
+#fauxBody > footer {
+  padding: 0.5rem 1rem;
+  flex-grow: 0;
+}
+#fauxBody > header {
+  display: flex;
 }
 
-nav > ul li {
-  display: inline-block;
-  padding: 0.5em;
+h1 {
+  font-size: 1.5em;
+  line-height: 2;
 }
 
-header {
-  padding-bottom: 0.5em;
+h1 ~ * {
+  flex-grow: 0;
 }
 
-section {
+#top nav {
+  padding: 0.75em 0;
+}
+
+#top li {
   display: inline;
+  list-style: none;
+  margin-left: 1.5em;
 }
 
-article {
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
+#top li a {
+  transition: transform 0.3s;
 }
 
-article > ul {
-  list-style: square;
-  margin-left: 2em;
-  padding-bottom: 1.25em;
+#top a {
+  display: inline-block;
+  text-decoration: none;
 }
 
-footer {
-  padding-top: 1.5em;
+#top li a:focus,
+#top li a:hover {
+  transform: scale(1.25);
 }
 
-a {
-  color: darkblue;
+main > section {
+  max-width: var(--maxWidth-constrain);
+  margin: 4em auto;
+  padding: 0 var(--pad);
 }
 
-img {
-  height: auto;
-  max-width: 100%;
-}
-
-p {
-  padding-bottom: 1.25em;
-}
-
-.card {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 190px;
-  width: 300px;
-  color: white;
-  padding: 1.25em;
-}
-
-.card a {
-  color: gold;
+main h2 {
+  font-size: 2em;
 }
 
 .grid {
@@ -139,5 +160,43 @@ p {
   display: grid;
   grid-template-columns: auto auto auto;
   text-align: center;
-  grid-gap: 1.5em;
+  grid-gap: 0.5em;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem var(--pad);
+  gap: clamp(1rem, var(--pad), 2rem);
+}
+
+#fauxBody > footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: min(1em, var(--pad));
+  padding: 1rem;
+  text-align: center;
+}
+
+#fauxBody > footer li {
+  list-style: none;
+  padding: 0.25em 0;
+}
+
+#fauxBody > footer a {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+#fauxBody > footer a:focus,
+#fauxBody > footer a:hover {
+  transform: scale(1.1);
+}
+
+#fauxBody > footer section:first-child {
+  width: 100%;
+  padding: 0.25em 0;
 }

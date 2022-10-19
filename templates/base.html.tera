@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <script type="module" src="https://cdn.jsdelivr.net/npm/@microsoft/fast-components/dist/fast-components.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="/static/screen.css" media="screen" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,36 +11,36 @@
         <title>thejeffism</title>
     </head>
     <body>
-        <header>
-            <h1><a href="/">The Jeffism</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="/about">About Me</a>
-                    <li><a href="/writing">Writing</a>
-                    <li><a href="/projects">Projects</a>
-                    <li><a href="/music">Music</a>
-                    <li><a href="/photography">Photography</a>
-                </ul>
-            </nav>
-            <figure>
-                 <img class="img" src="/static/20200619_Canon7DMKII_001.jpg" />
-                 <figcaption>Boundary Bay at Low Tide, June 19, 2020, Canon 7D MKII</figcaption>
-            </figure>
-        </header>
+        <div id="fauxBody">
+            <header id="top">
+                <h1><a href="/">The Jeffism</a></h1>
+                <button type="button" id="mainMenuOpen" hidden></button>
+                <nav>
+                    <ul>
+                        <li><a href="/about">About Me</a>
+                        <li><a href="/writing">Writing</a>
+                        <li><a href="/projects">Projects</a>
+                        <li><a href="/music">Music</a>
+                        <li><a href="/photography">Photography</a>
+                    </ul>
+                </nav>
+            </header>
 
-        {% block content %}{% endblock content %}
+            {% block content %}{% endblock content %}
 
-        <footer>
-            <p>&copy; {{ copyright_year }} Jeffery D Mitchell All Rights Reserved</p>
-            <nav>
-                <ul>
-                    <li><a href="https://twitter.com/sentinel1909">Twitter</a>
-                    <li><a href="https://instagram.com/thesentinel1909">Instagram</a>
-                    <li><a href="https://github.com/sentinel1909">GitHub</a>
-                </ul>
-            </nav>
-            <p>Site built with Rust, Rocket, Tera, and Docker...all hosted at <a href="https://railway.app">Railway</a>
-        </footer>
+            <footer>
+                <section>
+                    &copy; {{ copyright_year }} Jeffery D Mitchell All Rights Reserved
+                </section>
+                <section>
+                    <ul>
+                        <li><a href="https://twitter.com/sentinel1909" target="_blank">Twitter</a></li>
+                        <li><a href="https://instagram.com/thesentinel1909" target="_blank">Instagram</a></li>
+                        <li><a href="https://github.com/sentinel1909" target="_blank">GitHub</a></li>
+                    </ul>
+                </section>
+            </footer>
+        </div>
         <script src="/static/scripts.js"></script>
     </body>
 </html>

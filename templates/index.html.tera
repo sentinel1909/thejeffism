@@ -9,18 +9,21 @@
             <p>I'm a Certified Professional and Fire Engineer by day, but turn into a self-taught, fledgling developer and IT junkie by night...can also be dangerous with a camera.</p>
         </section>
         <br />
-        <section class="grid">
+        <section>
             <h2>Writing Spotlight</h2>
-            <article class="row">
-                {% for view in views %}
-                <fast-card class="card">
-                    <h3>{{ view.title }}</h3>
-                    <h4>{{ view.date }}</h4>
-                    <p>{{ view.excerpt }}</p>
-                    <a href="/posts/{{ view.id }}">More?</a>
-                </fast-card>
-            {% endfor %}
-            </article>
+            <div class="grid">
+                <section class="row">
+                    {% for view in views %}
+                        <article class="card">
+                            <h3>{{ view.title }}</h3>
+                            <h4>{{ view.date }}</h4>
+                            <p>{{ view.excerpt }}</p>
+                            <a href="/posts/{{ view.id }}">More?</a>
+                            </h3> 
+                        </article>  
+                    {% endfor %}
+                </section>
+            </div>
         </section>
     </main>
 
