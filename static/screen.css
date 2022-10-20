@@ -95,6 +95,8 @@ textarea:focus {
 
 #fauxBody {
   background-color: var(--color-main-bg);
+  background-image: url("/static/20200619_Canon7DMKII_001.jpg");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   height: 100%;
